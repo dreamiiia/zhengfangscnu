@@ -13,8 +13,8 @@ from urllib.parse import quote  # 用于转换带有中文的URL
 class ZFLogin(object):
     def __init__(self):
 
-        self.name = input("请输入您的学号")  # 设置账号
-        self.password = input("请输入您的密码")  # 密码
+        self.name = input("请输入您的学号:")  # 设置账号
+        self.password = input("请输入您的密码:")  # 密码
         self.url = "https://jwc.scnu.edu.cn/default2.aspx"
 
         self.s = requests.session()
