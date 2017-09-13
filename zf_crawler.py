@@ -1,5 +1,6 @@
 # -*- coding:utf-8 -*-
 # 之前已经实现了函数封装登录正方的方法，现在尝试一下类
+# 现在尝试使用git
 
 import os
 import time
@@ -50,7 +51,7 @@ class ZFLogin(object):
             "Connection": "keep-alive",
             "Host": "jwc.scnu.edu.cn",
             "Origin": "https://jwc.scnu.edu.cn",
-            "Referer": "https://jwc.scnu.edu.cn / default2.aspx"
+            "Referer": "https://jwc.scnu.edu.cn/default2.aspx"
         }
         # 构建表单数据
         data = {
@@ -127,4 +128,9 @@ class ZFLogin(object):
         for i in range(number):
             print(score_statistic.xpath("//table[@class='datelist']/tr[{}]/td/text()".format(i + 2)))
 
+def main():
+    zf = ZFLogin()
+    zf.get_score()
 
+if __name__ == '__main__':
+    main()
